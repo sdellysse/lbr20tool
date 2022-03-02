@@ -6,17 +6,17 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "start": "npm run start:http-server",
-    "start:http-server": "ts-node src/entry/http-server.ts",
-    "test": "npm run test:eslint && npm run test:jest",
-    "test:eslint": "eslint src",
+    "lint": "pnpm run lint:prettier && pnpm run lint:eslint",
+    "test": "pnpm run test:jest",
+    "lint:prettier": "prettier --write .",
+    "lint:eslint": "eslint src",
     "test:jest": "jest"
   },
   "dependencies": {
     "body-parser": "1.19.0",
     "express": "4.17.1",
     "express-promise-router": "4.1.0",
-    "runtypes": "6.3.2",
+    "node-ssh": "12.0.3",
     "zod": "3.9.8"
   },
   "devDependencies": {
@@ -26,7 +26,7 @@
     "@types/body-parser": "1.19.1",
     "@types/express": "^4.17.13",
     "@types/jest": "27.0.2",
-    "@types/node": "^16.7.1",
+    "@types/node": "^16.11.26",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
     "babel-jest": "27.2.4",
@@ -37,7 +37,7 @@
     "prettier-plugin-organize-imports": "2.3.4",
     "prettier-plugin-sort-json": "0.0.2",
     "ts-jest": "27.0.5",
-    "ts-node": "^10.2.1",
+    "ts-node": "^10.5.0",
     "typescript": "4.4.3"
   }
 }
